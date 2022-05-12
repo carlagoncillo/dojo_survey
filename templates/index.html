@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}">
+    <title>Dojo Survey</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Dojo Survey</h1>
+        <form action="/enter" method="POST">
+            <div class="top-bot">
+                <label>Name:</label>
+            </div>
+                <input class="input1" type="text" name='name' placeholder="enter name">
+            <div class="top-bot">    
+                <label>Dojo Location:</label>
+            </div>
+                <select class="drop" name="location">
+                    <option>California</option>
+                    <option>Colorado</option>
+                    <option>Hawaii</option>
+                    <option>Miami</option>
+                    <option>New York</option>
+                    <option>Seattle</option>
+                </select>
+            <div class="top-bot">  
+                <label>Favorite Language:</label>
+            </div> 
+                <select class="drop" name="language">
+                    <option>JavaScript</option>
+                    <option>Python</option>
+                    <option>C++</option>
+                    <option>C#</option>
+                    <option>HTML</option>
+                    <option>CSS</option>
+                </select>
+            <div class="top-bot">
+                <label>Comments (optional):</label>
+            </div>    
+                <input class="input2" type="text" name='comment' placeholder="*Provide Comments Here*">
+            <div class="top-bot">    
+                <input class="submit" type="submit" name="Submit">
+            </div> 
+        </form>
+    </div>
+</body>
+</html>
